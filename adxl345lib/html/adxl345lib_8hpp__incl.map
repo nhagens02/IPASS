@@ -1,0 +1,7 @@
+<map id="adxl345lib.hpp" name="adxl345lib.hpp">
+<area shape="rect" id="node3" href="$XYZCoordinate_8hpp.html" title="Coordinate object. " alt="" coords="107,80,243,107"/>
+<area shape="rect" id="node4" href="$I2cBus_8hpp.html" title="Class for I²C communication. " alt="" coords="267,80,355,107"/>
+<area shape="rect" id="node5" href="$Adxl345_8hpp.html" title="Main ADXL345 control class. " alt="" coords="379,80,474,107"/>
+<area shape="rect" id="node6" href="$Logging_8hpp.html" title="Simple logging class. " alt="" coords="498,80,590,107"/>
+<area shape="rect" id="node7" href="$UsbBus_8hpp.html" title="Class that handles console communication. " alt="" coords="614,80,709,107"/>
+</map>

@@ -1,30 +1,37 @@
 #include "adxl345lib.hpp"
 
-void I2cBus::createBus(){
-	
-	auto sclPin = hwlib::target::pin_oc(hwlib::target::pins::scl);
-	auto sdaPin = hwlib::target::pin_oc(hwlib::target::pins::sda);
-	
-//	if(sdaPinInt == 20){
-//		sdaPin = hwlib::target::pin_oc(hwlib::target::pins::sda);
-//	}
-//	if(sclPinInt == 21){
-//		sclPin = hwlib::target::pin_oc(hwlib::target::pins::sda);
-//	}
-	auto i2cBusHwLib = hwlib::i2c_bus_bit_banged_scl_sda(sclPin, sdaPin);
-	
-	//return hwlib::i2c_bus_bit_banged_scl_sda(sclPin, sdaPin);
-}
-
-void I2cBus::write(int deviceAddress, int registerAddress, int value){
-//	hwlib::i2c_bus &i2c = i2cBusHwLib;
-	auto i2cWriting = I2cBus::i2cBusHwLib::i2c_bus.write(deviceAddress);
+void I2cBus::write(hwlib::i2c_bus & bus, uint8_t deviceAddress, uint8_t registerAddress, uint8_t value){
+	auto i2cWriting = bus.write(deviceAddress);
 	i2cWriting.write(registerAddress);
 	i2cWriting.write(value);
+	char log[] = "Written value to device.";
+	Logging::writeToLog(log);
+	Logging::writeNewLine();
 }
 
-uint8_t I2cBus::read(int deviceAddress, int registerAddress){
-	hwlib::i2c_bus &i2c = I2cBus::i2cBusHwLib;
-	i2c.write(deviceAddress).write(registerAddress);
-	return i2c.read(deviceAddress).read_byte();
+uint8_t I2cBus::read(hwlib::i2c_bus & bus, uint8_t deviceAddress, uint8_t registerAddress){
+	char log[] = "Read byte from device.";
+	Logging::writeToLog(log);
+	Logging::writeNewLine();
+	bus.write(deviceAddress).write(registerAddress);
+	uint8_t returnValue = bus.read(deviceAddress).read_byte();
+	return returnValue;
+}
+
+void I2cBus::write(uint8_t deviceAddress, uint8_t registerAddress, uint8_t value){
+	write(I2cBus::i2cBusHwLib, deviceAddress, registerAddress, value);
+}
+
+uint8_t I2cBus::read(uint8_t deviceAddress, uint8_t registerAddress){
+	return read(I2cBus::i2cBusHwLib, deviceAddress, registerAddress);
+}
+
+I2cBus::I2cBus():
+sclPin( hwlib::target::pin_oc(hwlib::target::pins::scl) ),
+sdaPin( hwlib::target::pin_oc(hwlib::target::pins::sda) ),
+i2cBusHwLib( hwlib::i2c_bus_bit_banged_scl_sda(sclPin, sdaPin) )
+{
+	char log[] = "Succesfully created I2CBus object.";
+	Logging::writeToLog(log);
+	Logging::writeNewLine();
 }
