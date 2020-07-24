@@ -1,3 +1,0 @@
-#/bin/bash
-
-sudo ../../bmptk/tools/lpc21isp_197/lpc21isp_hr_linux.exe -termonly -term main.hex /dev/ttyACM0 115200 12000
