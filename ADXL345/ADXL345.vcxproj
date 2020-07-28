@@ -68,6 +68,8 @@
     <NMakeCleanCommandLine>bmptk-make.exe clean</NMakeCleanCommandLine>
     <NMakeReBuildCommandLine>bmptk-make.exe run</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>D:\Documents\Git\Programmeeromgeving\hwlib\library;D:\Documents\Git\Programmeeromgeving\hwlib\library\ports;D:\Documents\Git\Programmeeromgeving\hwlib\library\pins;D:\Documents\Git\Programmeeromgeving\hwlib\library\peripherals;D:\Documents\Git\Programmeeromgeving\hwlib\library\graphics;D:\Documents\Git\Programmeeromgeving\hwlib\library\core;D:\Documents\Git\Programmeeromgeving\hwlib\library\char-io;D:\Documents\Git\Programmeeromgeving\hwlib\library\targets;</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>D:\Documents\Git\Programmeeromgeving\hwlib\library;D:\Documents\Git\Programmeeromgeving\hwlib\library\ports;D:\Documents\Git\Programmeeromgeving\hwlib\library\pins;D:\Documents\Git\Programmeeromgeving\hwlib\library\peripherals;D:\Documents\Git\Programmeeromgeving\hwlib\library\graphics;D:\Documents\Git\Programmeeromgeving\hwlib\library\core;D:\Documents\Git\Programmeeromgeving\hwlib\library\char-io;D:\Documents\Git\Programmeeromgeving\hwlib\library\targets;</NMakeForcedIncludes>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <NMakeBuildCommandLine>bmptk-make.exe run</NMakeBuildCommandLine>
@@ -82,6 +84,8 @@
     <NMakeCleanCommandLine>bmptk-make.exe clean</NMakeCleanCommandLine>
     <NMakeReBuildCommandLine>bmptk-make.exe run</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>D:\Documents\Git\Programmeeromgeving\hwlib\library;D:\Documents\Git\Programmeeromgeving\hwlib\library\ports;D:\Documents\Git\Programmeeromgeving\hwlib\library\pins;D:\Documents\Git\Programmeeromgeving\hwlib\library\peripherals;D:\Documents\Git\Programmeeromgeving\hwlib\library\graphics;D:\Documents\Git\Programmeeromgeving\hwlib\library\core;D:\Documents\Git\Programmeeromgeving\hwlib\library\char-io;D:\Documents\Git\Programmeeromgeving\hwlib\library\targets;</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes>D:\Documents\Git\Programmeeromgeving\hwlib\library;D:\Documents\Git\Programmeeromgeving\hwlib\library\ports;D:\Documents\Git\Programmeeromgeving\hwlib\library\pins;D:\Documents\Git\Programmeeromgeving\hwlib\library\peripherals;D:\Documents\Git\Programmeeromgeving\hwlib\library\graphics;D:\Documents\Git\Programmeeromgeving\hwlib\library\core;D:\Documents\Git\Programmeeromgeving\hwlib\library\char-io;D:\Documents\Git\Programmeeromgeving\hwlib\library\targets;</NMakeForcedIncludes>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <NMakeBuildCommandLine>bmptk-make.exe run</NMakeBuildCommandLine>
@@ -100,6 +104,8 @@
     <ClCompile Include="adxl345lib\XYZCoordinate.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainOld.cpp" />
+    <ClCompile Include="Oled.cpp" />
+    <ClCompile Include="OledCoordinateDisplay.cpp" />
     <ClCompile Include="testMain.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -113,6 +119,8 @@
     <ClInclude Include="adxl345lib\Logging.hpp" />
     <ClInclude Include="adxl345lib\UsbBus.hpp" />
     <ClInclude Include="adxl345lib\XYZCoordinate.hpp" />
+    <ClInclude Include="Oled.hpp" />
+    <ClInclude Include="OledCoordinateDisplay.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
