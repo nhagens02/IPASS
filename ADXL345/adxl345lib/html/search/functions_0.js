@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['adxl345',['Adxl345',['../classAdxl345.html#a69ee424955c9c6e8cb5cf9dd14b274a1',1,'Adxl345']]]
+  ['adxl345_36',['Adxl345',['../classAdxl345.html#a238889de631a4041f5e3015bb1fa507e',1,'Adxl345']]]
 ];

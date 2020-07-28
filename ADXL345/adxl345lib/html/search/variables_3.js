@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['z',['z',['../classXYZCoordinate.html#a5c1095e2efb662fedd4590060ecf8c37',1,'XYZCoordinate']]]
+  ['y_53',['y',['../classXYZCoordinate.html#a264b86b7cbb444410beaacb3402a0786',1,'XYZCoordinate']]]
 ];

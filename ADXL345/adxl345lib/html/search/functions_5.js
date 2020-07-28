@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xyzcoordinate',['XYZCoordinate',['../classXYZCoordinate.html#a2948786de55fc28f43cc23c36f1923e4',1,'XYZCoordinate::XYZCoordinate(int16_t, int16_t, int16_t)'],['../classXYZCoordinate.html#a62a57453a7b05d9002bb5cbedbf4d009',1,'XYZCoordinate::XYZCoordinate()']]]
+  ['xyzcoordinate_49',['XYZCoordinate',['../classXYZCoordinate.html#accb790ff573605ce0132e9f0d2c02fd7',1,'XYZCoordinate']]]
 ];

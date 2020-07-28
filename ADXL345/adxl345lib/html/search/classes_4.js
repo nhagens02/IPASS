@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xyzcoordinate',['XYZCoordinate',['../classXYZCoordinate.html',1,'']]]
+  ['xyzcoordinate_30',['XYZCoordinate',['../classXYZCoordinate.html',1,'']]]
 ];

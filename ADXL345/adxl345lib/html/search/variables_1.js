@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x',['x',['../classXYZCoordinate.html#a8a6340fb88bb69c9355044e46cf183cd',1,'XYZCoordinate']]]
+  ['rawbus_51',['rawBus',['../classI2cBus.html#ae7311627236079c0879dc006ae539e0d',1,'I2cBus']]]
 ];

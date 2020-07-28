@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usbbus',['UsbBus',['../classUsbBus.html',1,'']]]
+  ['usbbus_29',['UsbBus',['../classUsbBus.html',1,'']]]
 ];
