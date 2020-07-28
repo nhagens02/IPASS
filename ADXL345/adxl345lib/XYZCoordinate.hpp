@@ -11,14 +11,9 @@ public:
 /// Constructor for an XYZCoordinate object with coordinates
 /// \details
 /// This is the constructor for an XYZCoordinate object.
-/// It must receive an X, Y and Z coordinate which will be stored inside.
-	XYZCoordinate(int16_t, int16_t, int16_t);
-/// \brief
-/// Constructor for an XYZCoordinate object without coordionates
-/// \details
-/// Whis is the constructor for an XYZCoordinate object.
-/// It does not need an X, Y or Z coordinate. These can be inserted later on.
-	XYZCoordinate();
+/// It may receive an X, Y and Z coordinate which will be stored inside.
+/// If no input is given, the coordinates will be set to 0.
+	XYZCoordinate(int16_t = 0, int16_t = 0, int16_t = 0);
 /// \brief
 /// X coordinate
 /// \details

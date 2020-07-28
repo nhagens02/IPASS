@@ -8,18 +8,22 @@
 /// It creates a hwlib I²C bus that will be used to write to and read from the bus.
 class I2cBus {
 private:
-	hwlib::target::pin_oc sclPin;
-	hwlib::target::pin_oc sdaPin;
-	hwlib::i2c_bus_bit_banged_scl_sda i2cBusHwLib;
+	hwlib::target::pin_oc scl;
+	hwlib::target::pin_oc sda;
 	void write(hwlib::i2c_bus&, uint8_t, uint8_t, uint8_t);
 	uint8_t read(hwlib::i2c_bus&, uint8_t, uint8_t);
 public:
+/// \brief
+/// The created hwlib i2c bus implementation.
+/// \details
+/// This is the raw i2c bus that can be used for other devices. Must be passed by reference.
+	hwlib::i2c_bus_bit_banged_scl_sda rawBus;
 /// \brief
 /// Creates a I2cBus object
 /// \details
 /// This is the constructor used to make a I2cBus object.
 /// The object returned is to be used for an Adxl345 object, so it knows what bus to communicate with.
-	I2cBus();
+	I2cBus(uint8_t = 1, uint8_t = 13, uint8_t = 1, uint8_t = 12);
 /// \brief
 /// Write function for writing to registers
 /// \details

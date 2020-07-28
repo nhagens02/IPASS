@@ -8,7 +8,7 @@
 /// The Adxl345 class uses a hwlib i2c class for communication with the real-world device.
 class Adxl345 {
 private:
-	I2cBus & bus;
+	adxl345lib::I2cBus & bus;
 	uint8_t address;
 	int16_t combineCoordinates(uint8_t, uint8_t);
 	int16_t readValue(uint8_t, uint8_t);
@@ -19,7 +19,7 @@ public:
 /// This is the constructor that will be used to create one Adxl345 object.
 /// You may create more than one instance of this object, if that fits your project.
 /// This constructor needs a bus it can use and an address that identifies the real-world ADXL345 chip.
-	Adxl345(I2cBus&, uint8_t);
+	Adxl345(adxl345lib::I2cBus&, uint8_t = 0x53);
 /// \brief
 /// Read an X coordinate
 /// \details
@@ -42,7 +42,7 @@ public:
 /// Function for automaticcaly reading all 3 axes
 /// \details
 /// This function reads all the 3 axes and conveniently puts them in a XYZcoordinate object so they will always stay together.
-	XYZCoordinate readXYZCoordinate();
+	adxl345lib::XYZCoordinate readXYZCoordinate();
 };
 
 #endif // ADXL345_HPP

@@ -1,35 +1,29 @@
 #include "adxl345lib.hpp"
 
-bool Logging::isLoggingEnabled = true;
+bool adxl345lib::Logging::isLoggingEnabled = true;
 
-void Logging::writeToLog(char input[50]){
-	if(Logging::isLoggingEnabled){
-		UsbBus::sendDataToHost(input);
+void adxl345lib::Logging::writeToLog(char input[50]){
+	if(adxl345lib::Logging::isLoggingEnabled){
+		adxl345lib::UsbBus::sendDataToHost(input);
 	}
 }
 
-void Logging::writeToLog(int16_t input){
-	if(Logging::isLoggingEnabled){
-		UsbBus::sendDataToHost(input);
+void adxl345lib::Logging::writeToLog(int16_t input){
+	if(adxl345lib::Logging::isLoggingEnabled){
+		adxl345lib::UsbBus::sendDataToHost(input);
 	}
 }
 
-void Logging::writeToLog(int input){
-	if(Logging::isLoggingEnabled){
-		UsbBus::sendDataToHost(input);
-	}
-}
-
-void Logging::writeNewLine(){
-	if(Logging::isLoggingEnabled){
+void adxl345lib::Logging::writeNewLine(){
+	if(adxl345lib::Logging::isLoggingEnabled){
 		char newLine[] = "\n";
-		UsbBus::sendDataToHost(newLine);
+		adxl345lib::UsbBus::sendDataToHost(newLine);
 	}
 }
 
-void Logging::writeTab(){
-	if(Logging::isLoggingEnabled){
+void adxl345lib::Logging::writeTab(){
+	if(adxl345lib::Logging::isLoggingEnabled){
 		char tab[] = "\t";
-		UsbBus::sendDataToHost(tab);
+		adxl345lib::UsbBus::sendDataToHost(tab);
 	}
 }

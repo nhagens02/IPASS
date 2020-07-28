@@ -6,11 +6,13 @@
 /// To find what you are looking for, check the 'classes' section.\n
 /// If you are curious about the way this library is built, please check the 'files' section.
 #include "hwlib.hpp"
-#include "XYZCoordinate.hpp"
-#include "I2cBus.hpp"
-#include "Adxl345.hpp"
-#include "Logging.hpp"
-#include "UsbBus.hpp"
+namespace adxl345lib {
+	#include "XYZCoordinate.hpp"
+	#include "I2cBus.hpp"
+	#include "Adxl345.hpp"
+	#include "Logging.hpp"
+	#include "UsbBus.hpp"
+}
 /// \brief
 /// Main include file
 /// \details
