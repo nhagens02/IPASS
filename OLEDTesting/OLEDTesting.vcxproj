@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{0064D3B4-FFC4-4A53-AA6F-414E5FC37853}</ProjectGuid>
+    <ProjectGuid>{B7EAABD8-46B2-4FF5-B948-FF298E5A9C97}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -62,36 +62,33 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <NMakeBuildCommandLine>bmptk-make.exe run</NMakeBuildCommandLine>
-    <NMakeOutput>main.exe</NMakeOutput>
-    <NMakeCleanCommandLine>bmptk-make.exe clean</NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>bmptk-make.exe run</NMakeReBuildCommandLine>
-    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
-    <NMakeIncludeSearchPath>..\..\..\hwlib\library;D:\Documents\Git\Programmeeromgeving\hwlib\library\ports;D:\Documents\Git\Programmeeromgeving\hwlib\library\pins;D:\Documents\Git\Programmeeromgeving\hwlib\library\peripherals;D:\Documents\Git\Programmeeromgeving\hwlib\library\graphics;D:\Documents\Git\Programmeeromgeving\hwlib\library\core;D:\Documents\Git\Programmeeromgeving\hwlib\library\char-io;D:\Documents\Git\Programmeeromgeving\hwlib\library\targets;</NMakeIncludeSearchPath>
-    <NMakeForcedIncludes>D:\Documents\Git\Programmeeromgeving\hwlib\library;D:\Documents\Git\Programmeeromgeving\hwlib\library\ports;D:\Documents\Git\Programmeeromgeving\hwlib\library\pins;D:\Documents\Git\Programmeeromgeving\hwlib\library\peripherals;D:\Documents\Git\Programmeeromgeving\hwlib\library\graphics;D:\Documents\Git\Programmeeromgeving\hwlib\library\core;D:\Documents\Git\Programmeeromgeving\hwlib\library\char-io;D:\Documents\Git\Programmeeromgeving\hwlib\library\targets;</NMakeForcedIncludes>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <NMakeBuildCommandLine>bmptk-make.exe run</NMakeBuildCommandLine>
-    <NMakeOutput>main.exe</NMakeOutput>
+    <NMakeOutput>OLEDTesting.exe</NMakeOutput>
     <NMakeCleanCommandLine>bmptk-make.exe clean</NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>bmptk-make.exe run</NMakeReBuildCommandLine>
+    <NMakeReBuildCommandLine>bmptk-make.exe clean run</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>..\..\..\hwlib\library\ports;..\..\..\hwlib\library\pins;..\..\..\hwlib\library\peripherals;..\..\..\hwlib\library\graphics;..\..\..\hwlib\library\core;..\..\..\hwlib\library\char-io;..\..\..\hwlib\library\targets;..\..\..\hwlib\library;</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>bmptk-make.exe run</NMakeBuildCommandLine>
+    <NMakeOutput>OLEDTesting.exe</NMakeOutput>
+    <NMakeCleanCommandLine>bmptk-make.exe clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>bmptk-make.exe clean run</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <NMakeBuildCommandLine>bmptk-make.exe run</NMakeBuildCommandLine>
-    <NMakeOutput>main.exe</NMakeOutput>
+    <NMakeOutput>OLEDTesting.exe</NMakeOutput>
     <NMakeCleanCommandLine>bmptk-make.exe clean</NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>bmptk-make.exe run</NMakeReBuildCommandLine>
+    <NMakeReBuildCommandLine>bmptk-make.exe clean run</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
-    <NMakeIncludeSearchPath>..\..\..\hwlib\library;D:\Documents\Git\Programmeeromgeving\hwlib\library\ports;D:\Documents\Git\Programmeeromgeving\hwlib\library\pins;D:\Documents\Git\Programmeeromgeving\hwlib\library\peripherals;D:\Documents\Git\Programmeeromgeving\hwlib\library\graphics;D:\Documents\Git\Programmeeromgeving\hwlib\library\core;D:\Documents\Git\Programmeeromgeving\hwlib\library\char-io;D:\Documents\Git\Programmeeromgeving\hwlib\library\targets;</NMakeIncludeSearchPath>
-    <NMakeForcedIncludes>D:\Documents\Git\Programmeeromgeving\hwlib\library;D:\Documents\Git\Programmeeromgeving\hwlib\library\ports;D:\Documents\Git\Programmeeromgeving\hwlib\library\pins;D:\Documents\Git\Programmeeromgeving\hwlib\library\peripherals;D:\Documents\Git\Programmeeromgeving\hwlib\library\graphics;D:\Documents\Git\Programmeeromgeving\hwlib\library\core;D:\Documents\Git\Programmeeromgeving\hwlib\library\char-io;D:\Documents\Git\Programmeeromgeving\hwlib\library\targets;</NMakeForcedIncludes>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <NMakeBuildCommandLine>bmptk-make.exe run</NMakeBuildCommandLine>
-    <NMakeOutput>main.exe</NMakeOutput>
+    <NMakeOutput>OLEDTesting.exe</NMakeOutput>
     <NMakeCleanCommandLine>bmptk-make.exe clean</NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>bmptk-make.exe run</NMakeReBuildCommandLine>
+    <NMakeReBuildCommandLine>bmptk-make.exe clean run</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
   </PropertyGroup>
   <ItemDefinitionGroup>
@@ -103,13 +100,9 @@
     <ClCompile Include="adxl345lib\UsbBus.cpp" />
     <ClCompile Include="adxl345lib\XYZCoordinate.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="mainOld.cpp" />
     <ClCompile Include="Oled.cpp" />
-    <ClCompile Include="OledCoordinateDisplay.cpp" />
-    <ClCompile Include="testMain.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="adxl345lib\Doxyfile" />
     <None Include="Makefile" />
   </ItemGroup>
   <ItemGroup>
@@ -120,7 +113,6 @@
     <ClInclude Include="adxl345lib\UsbBus.hpp" />
     <ClInclude Include="adxl345lib\XYZCoordinate.hpp" />
     <ClInclude Include="Oled.hpp" />
-    <ClInclude Include="OledCoordinateDisplay.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

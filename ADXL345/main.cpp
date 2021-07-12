@@ -26,17 +26,25 @@ int16_t * calculateAverage(adxl345lib::XYZCoordinate values[], unsigned int valu
 int main(){
 
 	WDT->WDT_MR = WDT_MR_WDDIS;
+	hwlib::wait_ms(1000);
 	isLoggingEnabled(false);
 	auto oledVcc = hwlib::target::pin_out(1, 14);
 	oledVcc.write(1);
-	adxl345lib::I2cBus adxlBus;
+	auto ADXLVcc = hwlib::target::pin_out(1, 21);
+	ADXLVcc.write(1);
+	auto sclAdxl = hwlib::target::pin_oc(hwlib::target::pins::scl);
+	auto sdaAdxl = hwlib::target::pin_oc(hwlib::target::pins::sda);
+	auto adxlBus_ = hwlib::i2c_bus_bit_banged_scl_sda(sclAdxl, sdaAdxl);
+	adxl345lib::I2cBus adxlBus(&adxlBus_);
 	adxl345lib::Adxl345 adxl(adxlBus);
-
-	adxl345lib::I2cBus oledBus(2, 12, 2, 14);
+	auto sclOled = hwlib::target::pin_oc(hwlib::target::pins::d51);
+	auto sdaOled = hwlib::target::pin_oc(hwlib::target::pins::d49);
+	auto oledBus_ = hwlib::i2c_bus_bit_banged_scl_sda(sclOled, sdaOled);
+	adxl345lib::I2cBus oledBus(&oledBus_);
 	Oled oledDisplay = Oled(oledBus);
 	OledCoordinateDisplay coordinateDisplay(oledDisplay);
 
-	const unsigned int readAmount = 32;
+	const unsigned int readAmount = 16;
 	adxl345lib::XYZCoordinate values[readAmount];
 	unsigned int currentIndex = 0;
 	while (true) {
@@ -46,6 +54,14 @@ int main(){
 		int16_t* averages = calculateAverage(values, readAmount);
 		adxl345lib::XYZCoordinate readCoords(averages[0], averages[1], averages[2]);
 		coordinateDisplay.printCoords(readCoords, currentIndex);
+		isLoggingEnabled(false);
+		adxl345lib::Logging::writeToLog(readCoords.x);
+		adxl345lib::Logging::writeToLog(",");
+		adxl345lib::Logging::writeToLog(readCoords.y);
+		adxl345lib::Logging::writeToLog(",");
+		adxl345lib::Logging::writeToLog(readCoords.z);
+		adxl345lib::Logging::writeNewLine();
+		isLoggingEnabled(false);
 		if (currentIndex >= 63) {
 			currentIndex = 0;
 		}
